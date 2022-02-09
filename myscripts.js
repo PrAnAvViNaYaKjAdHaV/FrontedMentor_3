@@ -5,7 +5,7 @@ const text = document.querySelectorAll('.cardText');
 
   async function fetchData(){
      this.classList.add("white");
-      const response = await fetch('/data.json');
+      const response = await fetch('./data.json');
       const Data = await response.json();
       text.forEach((text,i)=>{
         const{title,timeframes}= Data[i];
